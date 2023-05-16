@@ -16,12 +16,10 @@ function Navbr() {
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
+            >
             <Nav.Link href="#action2">MEN</Nav.Link>
             <Nav.Link href="#action2">WOMEN</Nav.Link>
-            <Nav.Link href="#action2">KIDS</Nav.Link>
-            
+            <Nav.Link href="#action2">KIDS</Nav.Link>            
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -33,8 +31,7 @@ function Navbr() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Nav 
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            className="ms-auto my-2 my-lg-0"
             navbarScroll>
           <NavDropdown title="Login" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Sign In</NavDropdown.Item>
