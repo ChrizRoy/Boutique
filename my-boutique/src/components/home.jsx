@@ -7,6 +7,7 @@ import img3 from '../images/img3.png';
 import { useState } from 'react';
 import Cards from './cards';
 import Footer from './footer';
+import Navbr from './navbr';
 
 function Home() {
     const [index, setIndex] = useState(0);
@@ -17,6 +18,7 @@ function Home() {
   
     return (
       <>
+      <Navbr/>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item interval={5000}>
           <img

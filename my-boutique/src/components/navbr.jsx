@@ -10,7 +10,7 @@ function Navbr() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">MY BOUTIQUE</Navbar.Brand>
+        <Navbar.Brand href="/home">MY BOUTIQUE</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -34,10 +34,10 @@ function Navbr() {
             className="ms-auto my-2 my-lg-0"
             navbarScroll>
           <NavDropdown title="Login" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Sign In</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Sign Up</NavDropdown.Item>
+              <NavDropdown.Item href="/signin">Sign In</NavDropdown.Item>
+              <NavDropdown.Item href="/reg">Sign Up</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item href="/home">
                HOME
               </NavDropdown.Item>
             </NavDropdown>

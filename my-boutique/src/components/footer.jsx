@@ -42,8 +42,9 @@ export default function App() {
                 My Boutique
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+              MY BOUTIQUE strives to deliver a convenient and enjoyable online shopping 
+              experience for users, offering a diverse selection of clothing items, easy 
+              navigation, secure payments, and reliable customer service.
               </p>
             </MDBCol>
 
@@ -51,22 +52,22 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  New Arrivals
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  React
+                  Brand Directory
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
+                  Collections
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Laravel
+                  Stores
                 </a>
               </p>
             </MDBCol>
@@ -75,7 +76,7 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Pricing
+                  Customer Care
                 </a>
               </p>
               <p>
@@ -99,17 +100,17 @@ export default function App() {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+                 Ernakulam, Kerala, India
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                myboutique@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                <MDBIcon icon="phone" className="me-3" /> + 91 234 567 88
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+                <MDBIcon icon="print" className="me-3" /> + 91 234 567 89
               </p>
             </MDBCol>
           </MDBRow>
@@ -117,9 +118,9 @@ export default function App() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
+        © 2023 Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          My Boutique
         </a>
       </div>
     </MDBFooter>

@@ -1,110 +1,86 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import React from 'react';
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBInput,
+  MDBIcon,
+  MDBCheckbox
+}
+from 'mdb-react-ui-kit';
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MinBr from './minbr';
+
+
 
 function Copyright(props) {
+    return (
+      <Typography variant="body2" color="text.secondary" align="center" {...props}>
+        {'Copyright © '}
+        <Link color="inherit" href="/home">
+          BOUTIQUE
+        </Link>{' '}
+        {new Date().getFullYear()}
+        {'.'}
+      </Typography>
+    );
+  }
+
+function SignIn() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+    <>
+    <MinBr/>
+    
+    <MDBContainer fluid>
+      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+        <MDBCardBody>
+          <MDBRow>
+            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-const theme = createTheme();
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="envelope me-3" size='lg'/>
+                <MDBInput label='Your Email' id='form2' type='email' />
+              </div>
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Password' id='form3' type='password'/>
+              </div>
+
+              <MDBBtn className='mb-4 mt-3' size='lg'>Login</MDBBtn>
+
+              <div>
+              <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
+              <Link href="/reg" variant="body3">
+                   {"Don't have an account? Sign Up"}
+             </Link>
               </Grid>
             </Grid>
-          </Box>
-        </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
-      </Container>
-    </ThemeProvider>
+              </div>
+
+            </MDBCol>
+
+            <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
+              <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp' fluid/>
+            </MDBCol>
+
+          </MDBRow>
+        </MDBCardBody>
+      </MDBCard>
+      <Copyright sx={{ mt: 8, mb: 4 }} />
+    </MDBContainer>
+    </>
   );
 }
+
+export default SignIn;
